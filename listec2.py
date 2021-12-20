@@ -3,7 +3,7 @@ import sys
 
 accesskey= sys.argv[1]
 secretkey= sys.argv[2]
-client = boto3.client('ec2',region_name = 'ap-south-1', aws_access_key_id = accesskey, aws_secret_access_key = secretkey)
+client = boto3.client('ec2',region_name = 'ap-southeast-1', aws_access_key_id = accesskey, aws_secret_access_key = secretkey)
 
 myec2 = client.describe_instances()
 for printins in myec2['Reservations']:
